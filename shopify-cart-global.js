@@ -8,7 +8,7 @@
   var STORE_CONFIG = {
     domain: "au0k9n-1k.myshopify.com",
     storefrontAccessToken: "5f29155f262d24f52aeecfde17190129",
-    collectionId: "495491317985",,
+    collectionId: "495491317985",
     moneyFormat: "%24%7B%7Bamount%7D%7D",
   };
   var COLLECTION_NODE_ID = "collection-component-1776613996121";
