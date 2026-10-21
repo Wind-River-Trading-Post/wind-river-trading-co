@@ -1,120 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wind River Trading Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wind River Trading Company | Fort Washakie, Wyoming</title>
     <meta
       name="description"
-      content="Wind River Trading Post in Fort Washakie with Pendleton, beadwork, jewelry, fabric, gifts, beading supplies, and the Gallery of the Wind."
+      content="Discover beadwork, earrings, bags, and more from Wind River Trading Company. Shop online or visit our Fort Washakie trading post, rooted here since 1946."
     />
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <link rel="canonical" href="https://wrtradingcompany.com/" />
-    <link rel="icon" href="./assets/favicon.svg?v=20260422" type="image/svg+xml" />
-    <link rel="icon" href="./assets/favicon-32x32.png?v=20260422" sizes="32x32" type="image/png" />
-    <link rel="icon" href="./assets/favicon-16x16.png?v=20260422" sizes="16x16" type="image/png" />
-    <link rel="shortcut icon" href="./assets/favicon.ico?v=20260422" />
-    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=20260422" sizes="180x180" />
-    <link rel="manifest" href="./site.webmanifest?v=20260422" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Wind River Trading Company" />
-    <meta property="og:title" content="Wind River Trading Company" />
+    <meta name="theme-color" content="#e2cbaa" />
+    <meta
+      property="og:title"
+      content="Wind River Trading Company | Fort Washakie, Wyoming"
+    />
     <meta
       property="og:description"
-      content="Wind River Trading Post in Fort Washakie with Pendleton, beadwork, jewelry, fabric, gifts, beading supplies, and the Gallery of the Wind."
+      content="Discover beadwork, earrings, bags, and more from Wind River Trading Company. Shop online or visit our Fort Washakie trading post, rooted here since 1946."
     />
-    <meta property="og:url" content="https://wrtradingcompany.com/" />
+    <meta property="og:type" content="website" />
     <meta
       property="og:image"
       content="https://wrtradingcompany.com/images/home-hero-storefront.jpg"
     />
-    <meta
-      property="og:image:alt"
-      content="Exterior storefront of Wind River Trading Company in Fort Washakie"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Wind River Trading Company" />
-    <meta
-      name="twitter:description"
-      content="Wind River Trading Post in Fort Washakie with Pendleton, beadwork, jewelry, fabric, gifts, beading supplies, and the Gallery of the Wind."
-    />
-    <meta
-      name="twitter:image"
-      content="https://wrtradingcompany.com/images/home-hero-storefront.jpg"
-    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://cdn.shopify.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;800&family=Source+Sans+3:wght@400;700;800&display=swap"
-        rel="stylesheet"
-      />
-    <link rel="stylesheet" href="./styles.css?v=20260427-mobile-bottom-dock-interactive" />
-    <script defer src="./site.js?v=20260427-mobile-bottom-dock-interactive"></script>
-    <script>
-      (() => {
-        const cartScriptSrc = "./shopify-cart-global.js?v=20260422";
-        let cartScriptPromise;
-        let cartScriptReady = false;
-        let replayingCartClick = false;
-
-        const loadCartScript = () => {
-          if (cartScriptPromise) {
-            return cartScriptPromise;
-          }
-
-          cartScriptPromise = new Promise((resolve, reject) => {
-            const script = document.createElement("script");
-            script.async = true;
-            script.src = cartScriptSrc;
-            script.onload = () => {
-              cartScriptReady = true;
-              resolve();
-            };
-            script.onerror = () => {
-              cartScriptPromise = null;
-              reject(new Error("Failed to load Shopify cart."));
-            };
-            document.head.appendChild(script);
-          });
-
-          return cartScriptPromise;
-        };
-
-        document.addEventListener(
-          "click",
-          (event) => {
-            const cartButton = event.target.closest("[data-cart-trigger]");
-
-            if (!cartButton || cartScriptReady || replayingCartClick) {
-              return;
-            }
-
-            event.preventDefault();
-            loadCartScript()
-              .then(() => {
-                replayingCartClick = true;
-                cartButton.click();
-                replayingCartClick = false;
-              })
-              .catch((error) => {
-                console.error(error);
-                replayingCartClick = false;
-              });
-          },
-          true
-        );
-
-        window.addEventListener(
-          "load",
-          () => {
-            window.setTimeout(loadCartScript, 4500);
-          },
-          { once: true }
-        );
-      })();
-    </script>
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261020-shipping-draft" />
+    <script
+      type="module"
+      src="storefront.js?v=20261020-shipping-draft"
+    ></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -172,330 +95,421 @@
       }
     </script>
   </head>
-  <body class="page-home has-mobile-bottom-cta">
-    <div class="site-shell">
-      <header class="site-header">
-        <div class="wrap">
-          <nav class="nav-bar" aria-label="Primary">
-            <a class="brand" href="index.html">
-              <span class="brand-copy">
-                <strong>Wind River Trading Company</strong>
-                <span>Fort Washakie, Wyoming</span>
-              </span>
-            </a>
-            <button
-              class="nav-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="primary-navigation"
-              aria-label="Open menu"
-              data-nav-toggle
+  <body class="page-home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="store-ribbon">
+      <div class="wrap">
+        <span
+          >Fort Washakie, Wyoming <span aria-hidden="true">·</span> Since
+          1946</span
+        ><a href="contact.html"
+          >A real store. A warm welcome. <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Wind River Trading Company home"
+          ><span class="brand-name">Wind River</span
+          ><span class="brand-descriptor">Trading Company</span></a
+        >
+        <nav id="primary-navigation" aria-label="Primary">
+          <a href="shop.html">Shop</a><a href="about.html">About us</a
+          ><a href="gallery-of-the-wind.html">The gallery</a
+          ><a href="contact.html">Visit us</a>
+        </nav>
+        <div class="header-actions">
+          <button
+            type="button"
+            class="bag-trigger"
+            data-cart-trigger
+            aria-label="Open shopping bag"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
             >
-              <span class="sr-only">Toggle navigation</span>
-              <span class="nav-toggle-box" aria-hidden="true">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-              </span>
-            </button>
-            <div class="nav-links" id="primary-navigation">
-              <a aria-current="page" href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="gallery-of-the-wind.html">Gallery of the Wind</a>
-              <a href="collections.html">Collections</a>
-              <a href="contact.html">Contact</a>
-              <a class="nav-conversion" href="shop.html">Shop Online</a>
-            </div>
-            <button class="header-cart-button" type="button" data-cart-trigger aria-label="Open cart">
-              <span class="sr-only">Open cart</span>
-              <svg class="header-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 7h16l-1.5 11H5.5L4 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9 9V6.75a3 3 0 0 1 6 0V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              <span class="header-cart-badge" data-cart-count hidden aria-hidden="true">0</span>
-            </button>
-          </nav>
+              <path d="M5 7h14l1 14H4L5 7Z" />
+              <path d="M8 9V6a4 4 0 0 1 8 0v3" /></svg
+            ><span class="bag-word">Bag</span
+            ><span data-cart-count hidden>0</span></button
+          ><button
+            type="button"
+            class="nav-toggle"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Open menu"
+          >
+            <span></span><span></span>
+          </button>
         </div>
-      </header>
-
-      <main>
-        <section class="hero hero--immersive">
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="home-hero">
+        <div class="hero-image">
           <img
-            class="hero-backdrop"
+            class=""
             src="images/home-hero-storefront.webp"
-            alt="Exterior storefront of Wind River Trading Company in Fort Washakie"
-            width="1600"
-            height="2000"
+            alt="The wooden storefront of Wind River Trading Company in Fort Washakie"
+            width="1400"
+            height="1000"
             fetchpriority="high"
             decoding="async"
           />
-          <div class="wrap hero-grid">
-            <div class="hero-copy">
-              <p class="eyebrow">Since 1946</p>
-              <h1><span class="hero-title-line">Wind River</span><span class="hero-title-line">Trading</span><span class="hero-title-line">Company.</span></h1>
-              <p class="lede">
-                We carry Pendleton, beadwork, jewelry, fabric, gifts, and beading supplies, with
-                the Gallery of the Wind right here in the building.
-              </p>
-              <div class="button-row">
-                <a class="btn btn-primary" href="shop.html">Shop Online</a>
-                <a class="btn btn-ghost" href="contact.html">Visit the store</a>
-                <a class="btn btn-tertiary" href="tel:+13073323267">Call ahead</a>
-                <span class="hero-hours-note">
-                  <span class="hero-hours-note-label">Hours</span>
-                  <span class="hero-hours-note-copy">Mon-Sat 9am-6pm | Sun 9am-5pm</span>
-                </span>
-              </div>
-            </div>
+        </div>
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Discover Wind River</p>
+            <h1>A trading post.<br />A world of finds.</h1>
+            <p>
+              Beadwork, jewelry, and pieces with personality.<br />
+              From our store in Fort Washakie to wherever you call home.
+            </p>
+            <a class="btn" href="shop.html"
+              >Shop the collection<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M4 12h15m-6-6 6 6-6 6" /></svg></a
+            ><a class="hero-story" href="about.html"
+              >Get to know the store <span aria-hidden="true">↗</span></a
+            >
           </div>
-        </section>
-
-        <section class="section home-rooted-section">
-          <div class="wrap">
-            <div class="home-rooted-layout">
-              <div class="home-rooted-copy">
-                <p class="eyebrow">Fort Washakie trading post</p>
-                <h2>A trading post in Fort Washakie</h2>
-                <p>
-                  Wind River Trading Company has been in Fort Washakie since 1946. People come in
-                  for Pendleton blankets, beadwork, Native-made goods, western wear, fabric, gifts,
-                  and the supplies they know they can find here.
-                </p>
-                <p>
-                  The rooms carry jewelry, fabric, gifts, regional pieces, and beading supplies.
-                  The Gallery of the Wind adds another reason to look past the front counter.
-                </p>
-                <div class="home-rooted-facts" aria-label="Store highlights">
-                  <div>
-                    <span>Opened</span>
-                    <strong>1946</strong>
-                  </div>
-                  <div>
-                    <span>Inside</span>
-                    <strong>Store + gallery</strong>
-                  </div>
-                  <div>
-                    <span>Location</span>
-                    <strong>Fort Washakie</strong>
-                  </div>
-                </div>
-              </div>
-              <figure class="framed-photo home-rooted-photo">
-                <img
-                  src="images/courtyard-exterior.webp"
-                  alt="Courtyard and exterior walkways at Wind River Trading Company"
-                  width="1241"
-                  height="828"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
+          <span class="hero-location"
+            >14631 Highway 287<br />Fort Washakie, Wyoming</span
+          >
+        </div>
+      </section>
+      <div class="welcome-strip">
+        <div class="wrap">
+          <span>A family store with deep roots.</span
+          ><span>A collection with plenty of character.</span
+          ><a href="contact.html"
+            >Come see for yourself
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+      </div>
+      <section class="section featured-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A few discoveries</p>
+              <h2>Find a piece that feels like you.</h2>
             </div>
+            <a class="text-link" href="shop.html"
+              >Explore all pieces<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+            ></a>
           </div>
-        </section>
-
-        <section class="section section-tight home-merch-section">
-          <div class="wrap">
-            <div class="home-overview-layout">
-              <div class="home-overview-visuals">
-                <figure class="framed-photo home-overview-photo home-overview-photo--main">
-                  <img
-                    src="images/inside-wind-river-trading-co.webp"
-                    alt="Interior showroom with display cases, blankets, and Western goods inside Wind River Trading Company"
-                    width="1600"
-                    height="900"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </figure>
-                <div class="home-overview-support">
-                  <figure class="framed-photo home-overview-photo home-overview-photo--article">
-                    <img
-                      src="images/chief-washakie-article.webp"
-                      alt="Chief Washakie article on display inside Wind River Trading Company"
-                      width="1200"
-                      height="1800"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                  <figure class="framed-photo home-overview-photo home-overview-photo--coyote">
-                    <img
-                      src="images/antique-wile-e-coyote.webp"
-                      alt="Antique Wile E. Coyote display inside Wind River Trading Company"
-                      width="1200"
-                      height="1800"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </figure>
-                </div>
-              </div>
-
-              <div class="home-overview-content">
-                <div class="section-head home-section-head">
-                  <div>
-                    <p class="eyebrow">What you&rsquo;ll find</p>
-                    <h2>Goods for everyday use, gifts, and a few things you won&rsquo;t see everywhere.</h2>
-                  </div>
-                  <p>
-                    The shelves run from blankets and clothing to beadwork, jewelry, fabric, art,
-                    antiques, and beading supplies. Some people come in knowing exactly what they
-                    need. Others take their time and look around.
-                  </p>
-                </div>
-
-                <div class="merch-grid home-overview-grid">
-                  <article class="card home-overview-card">
-                    <p class="card-label">Pendleton &amp; apparel</p>
-                    <h3>Blankets, clothing, and Western wear.</h3>
-                    <p>
-                      Pendleton blankets, clothing, towels, Native &amp; Western apparel, hats, and
-                      accessories.
-                    </p>
-                  </article>
-                  <article class="card home-overview-card">
-                    <p class="card-label">Bags &amp; personal goods</p>
-                    <h3>Bags, purses, and wallets.</h3>
-                    <p>
-                      Bags, purses, wallets, and other everyday carry items.
-                    </p>
-                  </article>
-                  <article class="card home-overview-card">
-                    <p class="card-label">Jewelry &amp; beadwork</p>
-                    <h3>Jewelry, beadwork, and supplies.</h3>
-                    <p>
-                      Handcrafted jewelry and beadwork stay in the cases. Fabric, ribbon, beads,
-                      and supplies stay close at hand.
-                    </p>
-                  </article>
-                  <article class="card home-overview-card">
-                    <p class="card-label">Art, artifacts &amp; gifts</p>
-                    <h3>Art, antiques, gifts, and the gallery.</h3>
-                    <p>
-                      Native American artwork, artifacts, antiques, gifts, and the Gallery of the
-                      Wind all share the building.
-                    </p>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-tight home-gallery-section">
-          <div class="wrap">
-            <div class="home-gallery-layout">
-              <div class="home-gallery-copy">
-                <div class="section-head home-section-head">
-                  <div>
-                    <p class="eyebrow">Gallery of the Wind</p>
-                    <h2>A closer look beyond the sales floor.</h2>
-                  </div>
-                  <p>
-                    Use the gallery page for the car room, Chief Washakie display, beadwork,
-                    photographs, and older pieces.
-                  </p>
-                </div>
-                <div class="note-list home-gallery-notes">
-                  <div class="note-item">
-                    <strong>Store rooms</strong>
-                    <span>Pendleton, jewelry, fabric, gifts, and beading supplies.</span>
-                  </div>
-                  <div class="note-item">
-                    <strong>Gallery page</strong>
-                    <span>See the room, displays, and stories in more detail.</span>
-                  </div>
-                  <div class="note-item">
-                    <strong>Collections</strong>
-                    <span>Get a broader look at what the store carries.</span>
-                  </div>
-                </div>
-                <div class="utility-links compact-links">
-                  <a href="gallery-of-the-wind.html">Gallery page</a>
-                  <a href="collections.html">Collections</a>
-                  <a href="about.html">Store history</a>
-                </div>
-              </div>
-
-              <figure class="framed-photo home-gallery-photo home-gallery-photo--main">
-                <img
-                  src="images/gallery-of-the-wind-2.webp"
-                  alt="Gallery of the Wind room with a historic car and display cases inside Wind River Trading Company"
-                  width="1800"
-                  height="1200"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-tight">
-          <div class="wrap">
-            <div class="cta-band home-cta-band">
-              <figure class="framed-photo home-cta-photo">
-                <img
-                  src="images/pendleton-display-2.webp"
-                  alt="Pendleton blanket display inside Wind River Trading Company"
-                  width="1800"
-                  height="1200"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div class="home-cta-copy">
-                <div>
-                  <p class="eyebrow">Shop online</p>
-                  <h2>Order available goods from wherever you are.</h2>
-                  <p>
-                    The online store will keep growing. The Fort Washakie store is here when you
-                    are nearby.
-                  </p>
-                </div>
-                <div class="button-row">
-                  <a class="btn btn-primary" href="shop.html">Shop Online</a>
-                  <a class="btn btn-secondary" href="contact.html">Visit the store</a>
-                  <a class="btn btn-tertiary" href="tel:+13073323267">Call ahead</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="wrap footer-grid">
-          <div class="footer-branding">
-            <p class="footer-brand">Wind River Trading Company</p>
-            <p class="footer-location">14631 Hwy. 287, Fort Washakie, WY 82514</p>
-            <a class="footer-phone" href="tel:+13073323267">(307) 332-3267</a>
-            <p class="footer-hours">Monday to Saturday: 9:00 AM to 6:00 PM<br />Sunday: 9:00 AM to 5:00 PM</p>
-          </div>
-          <div class="footer-link-groups">
-            <div class="footer-links">
-              <p class="footer-heading">Pages</p>
-              <a href="index.html">Home</a>
-              <a href="about.html">About</a>
-              <a href="gallery-of-the-wind.html">Gallery of the Wind</a>
-              <a href="collections.html">Collections</a>
-              <a class="footer-primary-link" href="shop.html">Shop Online</a>
-              <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-links">
-              <p class="footer-heading">Contact</p>
-              <a href="https://maps.google.com/?q=14631+Hwy+287+Fort+Washakie+WY+82514" target="_blank" rel="noreferrer">Google Maps</a>
-              <a href="tel:+13073323267">Call Ahead</a>
-              <a href="https://www.facebook.com/Wind-River-Trading-Company-1144894348871478/" target="_blank" rel="noreferrer">Facebook</a>
-            </div>
+          <div class="product-grid" data-featured aria-busy="true">
+            <p class="loading-copy" role="status">
+              Bringing the collection to you…
+            </p>
           </div>
         </div>
-      </footer>
-    </div>
-    <nav class="mobile-bottom-cta" aria-label="Shop and visit">
-      <a class="mobile-bottom-cta__primary" href="shop.html">Shop Online</a>
-      <a class="mobile-bottom-cta__secondary" href="contact.html">Visit Store</a>
-    </nav>
+      </section>
+      <section class="section categories-section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Follow your eye</p>
+              <h2>What catches yours?</h2>
+            </div>
+            <p>Start with a favorite. See where it takes you.</p>
+          </div>
+          <div class="category-grid">
+            <a class="category-card" href="shop.html?category=earrings"
+              ><div class="category-image">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0824/5116/9505/files/149BAB24-F035-4D05-8D3B-790ECB433ED3.jpg?v=1785274571&width=800"
+                  alt=""
+                  width="700"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-caption">
+                <h3>Earrings</h3>
+                <p>Color, movement, and a little personality.</p>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" />
+                </svg></div></a
+            ><a class="category-card" href="shop.html?category=bags"
+              ><div class="category-image">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0824/5116/9505/files/CD97D6F7-FF12-4416-89AC-9C3D86C6FBE4.jpg?v=1784476220&width=800"
+                  alt=""
+                  width="700"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-caption">
+                <h3>Bags & wallets</h3>
+                <p>Beadwork to take along.</p>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" />
+                </svg></div></a
+            ><a class="category-card" href="shop.html?category=accessories"
+              ><div class="category-image">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0824/5116/9505/files/7E5ED9AF-2753-496E-A245-8BFDF03CB3B1.jpg?v=1783794130&width=800"
+                  alt=""
+                  width="700"
+                  height="800"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-caption">
+                <h3>Accessories</h3>
+                <p>The details that make it yours.</p>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" />
+                </svg></div
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="section story-section">
+        <div class="wrap story-split">
+          <div class="story-photo">
+            <img
+              class=""
+              src="images/inside-wind-river-trading-co.webp"
+              alt="Display cases and shelves inside the Fort Washakie trading post"
+              width="1400"
+              height="1000"
+              loading="lazy"
+              decoding="async"
+            /><span class="photo-caption"
+              >There’s more around every corner.</span
+            >
+          </div>
+          <div class="story-copy">
+            <p class="eyebrow">Much more than an online shop</p>
+            <h2>Rooted here.<br />Since 1946.</h2>
+            <p>
+              Our story begins with Hines General Store in Fort Washakie. Today,
+              Wind River Trading Company brings everyday goods, beadwork,
+              Pendleton, and local history together under one roof.
+            </p>
+            <p>
+              Shop a selection online. Come to Wyoming for the rest of the
+              discovery.
+            </p>
+            <a class="text-link" href="about.html"
+              >The story behind the store<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="section last-discoveries">
+        <div class="wrap discovery-grid">
+          <a class="discovery-card" href="contact.html"
+            ><img
+              class=""
+              src="images/pendleton-display-2.webp"
+              alt="Pendleton blankets on display in the store"
+              width="1400"
+              height="1000"
+              loading="lazy"
+              decoding="async" />
+            <div>
+              <p class="eyebrow">Worth the stop</p>
+              <h2>More in store.</h2>
+              <p>Pendleton, fabric, supplies, and a warm welcome.</p>
+              <span class="text-link"
+                >Plan a visit
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+              ></span></div></a
+          ><a class="discovery-card" href="gallery-of-the-wind.html"
+            ><img
+              class=""
+              src="images/gallery-of-the-wind-2.webp"
+              alt="A historic car and display cases in the Gallery of the Wind"
+              width="1400"
+              height="1000"
+              loading="lazy"
+              decoding="async" />
+            <div>
+              <p class="eyebrow">Stay a little longer</p>
+              <h2>Gallery of the Wind.</h2>
+              <p>A closer look at the stories inside the trading post.</p>
+              <span class="text-link"
+                >Explore the gallery
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+              ></span></div
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div class="footer-intro">
+          <a class="brand" href="index.html"
+            ><span class="brand-name">Wind River</span
+            ><span class="brand-descriptor">Trading Company</span></a
+          >
+          <p>Rooted in Fort Washakie.<br />Full of things worth discovering.</p>
+          <p class="footer-address">
+            14631 Hwy. 287<br />Fort Washakie, WY 82514
+          </p>
+        </div>
+        <div>
+          <h2>Find your piece</h2>
+          <a href="shop.html">Shop all</a
+          ><a href="shop.html?category=earrings">Earrings</a
+          ><a href="shop.html?category=bags">Bags &amp; wallets</a
+          ><a href="shop.html?category=accessories">Accessories</a>
+        </div>
+        <div>
+          <h2>Meet the store</h2>
+          <a href="about.html">About us</a
+          ><a href="gallery-of-the-wind.html">Gallery of the Wind</a
+          ><a href="contact.html">Plan your visit</a
+          ><a href="contact.html#in-store">In the store</a>
+        </div>
+        <div>
+          <h2>Let’s talk</h2>
+          <a href="tel:+13073323267">(307) 332-3267</a
+          ><a href="shipping.html">Shipping policy (draft)</a
+          ><a href="contact.html#orders">Order questions</a
+          ><a
+            href="https://www.facebook.com/Wind-River-Trading-Company-1144894348871478/"
+            target="_blank"
+            rel="noreferrer"
+            >Facebook ↗</a
+          >
+          <p>Mon–Sat · 9am–6pm<br />Sunday · 9am–5pm</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>Wind River Trading Company</span
+        ><span>Fort Washakie, Wyoming · Since 1946</span>
+      </div>
+    </footer>
+    <dialog id="shopping-bag" class="shopping-bag" aria-labelledby="bag-title">
+      <div class="bag-heading">
+        <h2 id="bag-title">Your bag</h2>
+        <button
+          type="button"
+          class="icon-button"
+          data-close-bag
+          aria-label="Close shopping bag"
+          autofocus
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <p
+        class="bag-message"
+        data-bag-message
+        role="status"
+        aria-live="polite"
+      ></p>
+      <div class="bag-items" data-bag-items></div>
+      <div class="bag-summary" data-bag-summary hidden>
+        <div><span>Subtotal</span><strong data-subtotal></strong></div>
+        <p>
+          Review shipping and taxes at checkout.<br /><a
+            class="policy-link"
+            href="shipping.html"
+            >Shipping policy (draft)</a
+          >
+        </p>
+        <button type="button" class="btn" data-checkout>
+          Continue to checkout
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15m-6-6 6 6-6 6" />
+          </svg></button
+        ><a class="bag-help" href="tel:+13073323267"
+          >Need a hand? (307) 332-3267</a
+        >
+      </div>
+    </dialog>
+    <noscript
+      ><div class="noscript-note">
+        Please enable JavaScript to browse products and use your bag. For help
+        ordering, call <a href="tel:+13073323267">(307) 332-3267</a>.
+      </div></noscript
+    >
   </body>
 </html>
