@@ -2119,7 +2119,7 @@ body:has(.shopping-bag[open]) {
   }
 }
 
-/* Shipping policy draft, kept within the existing store palette. */
+/* Shipping and returns, within the existing store palette. */
 .policy-link {
   display: inline-block;
   min-height: 24px;
@@ -2133,23 +2133,17 @@ body:has(.shopping-bag[open]) {
 .policy-page h1 {
   font-size: clamp(36px, 4.8vw, 56px);
 }
-.policy-draft,
-.policy-pending {
+.policy-help {
   padding: clamp(20px, 3vw, 28px);
   background: var(--paper-light);
   border-left: 3px solid var(--rose-dark);
 }
-.policy-draft {
-  margin-top: 28px;
-}
-.policy-draft h2,
-.policy-pending h2 {
+.policy-help h2 {
   font: 700 18px/1.4 var(--body);
   letter-spacing: 0;
   margin-bottom: 10px;
 }
-.policy-draft p,
-.policy-pending p {
+.policy-help p {
   font-size: 16px;
   color: var(--muted);
 }
@@ -2165,6 +2159,6 @@ body:has(.shopping-bag[open]) {
 .policy-section p + p {
   margin-top: 12px;
 }
-.policy-pending {
+.policy-help {
   margin-top: 32px;
 }
