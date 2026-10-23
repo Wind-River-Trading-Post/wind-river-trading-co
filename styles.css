@@ -946,13 +946,17 @@ details p {
 }
 .timeline {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 40px;
   margin-top: 45px;
 }
 .timeline article {
+  grid-column: span 2;
   border-top: 1px solid var(--line);
   padding-top: 24px;
+}
+.timeline article:nth-last-child(-n + 2) {
+  grid-column: span 3;
 }
 .timeline span {
   font: 500 34px var(--display);
@@ -1580,7 +1584,15 @@ body:has(.shopping-bag[open]) {
     height: 240px;
   }
   .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
+  }
+  .timeline article,
+  .timeline article:nth-last-child(-n + 2) {
+    grid-column: auto;
+  }
+  .timeline article:last-child {
+    grid-column: 1 / -1;
   }
   .gallery-features {
     gap: 28px;
