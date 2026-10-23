@@ -27,6 +27,8 @@ const money = (amount, currency = "USD") =>
     maximumFractionDigits: Number(amount) % 1 ? 2 : 0,
   }).format(Number(amount));
 const productUrl = (p) => `product.html?handle=${encodeURIComponent(p.handle)}`;
+const shippingSummary = "$15 standard shipping · Free on orders $70+";
+const returnSummary = "14-day returns on unworn, unused items.";
 const arrow =
   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
 function imageUrl(url, width = 640) {
@@ -217,9 +219,9 @@ async function loadProduct() {
       <div class="product-info"><p class="eyebrow">${categories[category]} · Wind River Trading Company</p><h1>${escape(product.title)}</h1><p class="detail-price" data-variant-price>${money(variant.price.amount, variant.price.currencyCode)}</p><p class="availability" data-availability>${variant.availableForSale ? "Available to order" : "Currently sold out"}</p>
       <form data-product-form>${product.variants.nodes.length > 1 ? `<label class="field-label" for="product-option">Choose an option</label><select id="product-option" name="variant">${product.variants.nodes.map((v) => `<option value="${escape(v.id)}" ${v.id === variant.id ? "selected" : ""}>${escape(v.title)}${v.availableForSale ? "" : " — sold out"}</option>`).join("")}</select>` : ""}
       <div class="purchase-row"><div><label class="field-label" for="product-quantity">Quantity</label><input id="product-quantity" type="number" name="quantity" value="1" min="1" max="99" step="1" inputmode="numeric" required></div><button class="btn add-button" type="submit" ${variant.availableForSale ? "" : "disabled"}>${variant.availableForSale ? "Add to bag" : "Sold out"} ${arrow}</button></div><p class="form-status" data-product-message role="status" aria-live="polite"></p></form>
-      <p class="purchase-note">Review shipping and your final total at checkout.<br /><a class="policy-link" href="shipping.html">Shipping &amp; returns</a></p>
-      <details open><summary>About this piece</summary><p class="product-description">${escape(product.description || "For more details about this piece, call (307) 332-3267.").replace(/\s*(?=(?:Length|Width|Height|Diameter|Materials|Weight|Strap|Pouch):)/g, "\n")}</p></details>
-      <details><summary>Questions before ordering?</summary><p>Need a closer look, help with sizing, or information about shipping and returns? Talk with the store before ordering.</p><a class="text-link" href="tel:+13073323267">Call (307) 332-3267</a></details>
+      <p class="purchase-note">${shippingSummary}<br />Typically ships within 2–3 business days.<br /><a class="policy-link" href="shipping.html">Shipping &amp; returns</a><br />${returnSummary} <a class="policy-link" href="shipping.html#returns">See return policy.</a></p>
+      <details open><summary>About this piece</summary><p class="product-description">${escape(product.description || "For more details about this piece, call (307) 332-3267.").replace(/\s*(?=(?:Length|Width|Height|Diameter|Materials|Weight|Strap|Pouch):)/g, "\n")}</p>${product.productType?.trim().toLowerCase() === "beadwork" ? '<p>Native American-made beadwork, sourced primarily from local artists in Wyoming.</p>' : ""}</details>
+      <details><summary>Questions before ordering?</summary><p>Need a closer look or help with sizing? Call the store. For shipping details and return conditions, see our <a class="policy-link" href="shipping.html">shipping &amp; returns policy</a>.</p><a class="text-link" href="tel:+13073323267">Call (307) 332-3267</a></details>
       <a class="product-store-note" href="about.html">From our trading post in Fort Washakie, Wyoming. <span aria-hidden="true">↗</span></a></div></div>`;
     target.querySelectorAll("[data-photo]").forEach((b) =>
       b.addEventListener("click", () => {
@@ -299,6 +301,9 @@ const bag = $("#shopping-bag"),
 let activeCart = null,
   busy = false,
   bagReturnFocus;
+// The available subtotal is before cart-level discounts. Keep shipping terms
+// static rather than infer eligibility that could differ at Shopify checkout.
+bag.querySelector(".bag-summary > p").innerHTML = `${shippingSummary}<br />Review shipping and taxes at checkout.<br /><a class="policy-link" href="shipping.html">Shipping &amp; returns</a>`;
 function setBadge(cart) {
   const count = cart?.totalQuantity || 0;
   document.querySelectorAll("[data-cart-count]").forEach((el) => {
